@@ -45,6 +45,7 @@
     </div>
   </nav>
   <main>
+    <div class="post">
     <h1 class="post-title">Résumé</h1>
     <div class="post-line"></div>
     <div ng-repeat="res in details.resume">
@@ -57,34 +58,29 @@
       </ul>
 
       <ul ng-if="res.details.type === 'table'">
-          <li ng-repeat="table in res.details.values">
-            <h3 ng-if="table.type === 'company'">{{table.name}} <br/> <sup>{{table.role}} | {{table.period}}</sup></h3>
-            <ul ng-if="table.type === 'company'">
-                <li ng-repeat="tableDetails in table.detail">{{tableDetails.value}}</li>
-              </ul>
-            <h3 ng-if="table.type === 'study'">{{table.name}} <br/> <sup>{{table.marks}} | {{table.period}}</sup></h3>
-            <p ng-if="table.type === 'study'">{{table.detail}}</p>
-          </li>
-        </ul>
+        <li ng-repeat="table in res.details.values">
+          <h3 ng-if="table.type === 'company'">{{table.name}} <br /> <sup>{{table.role}} | {{table.period}}</sup></h3>
+          <ul ng-if="table.type === 'company'">
+            <li ng-repeat="tableDetails in table.detail">{{tableDetails.value}}</li>
+          </ul>
+          <h3 ng-if="table.type === 'study'">{{table.name}} <br /> <sup>{{table.marks}} | {{table.period}}</sup></h3>
+          <p ng-if="table.type === 'study'">{{table.detail}}</p>
+        </li>
+      </ul>
     </div>
 
     <div class="pagination">
       <a href="#" class="top">Top</a>
     </div>
-
+    </div>
+    
   </main>
-
-  <!-- 
-    <div ng-app="cvapp" ng-controller="genericController">
-        <ul>
-          <li ng-repeat="x in products">{{x}}</li>
-        </ul>
-        <input ng-model="addMe">
-        <button ng-click="addItem()">Add</button>
-      </div>
-      
-      <p>Write in the input field to add items.</p>
-       -->
 </body>
+
+<footer>
+  <span>
+    &copy; <time datetime="2019-01-15 09:29:13 +0000">2019</time> Sourav Dey.
+  </span>
+</footer>
 
 </html>
