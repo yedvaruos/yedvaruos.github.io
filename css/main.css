@@ -620,3 +620,29 @@ footer span {
     display: block;
     width: 2rem
 }
+
+.prefill {
+    color: #666;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 20px;
+    display: block;
+}
+
+.prefill .chip {
+    background: #eee;
+    padding: 11px 20px;
+    border-radius: 4px;
+    margin: 10px 10px 0 0;
+    color: #666;
+    max-width: 515px;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
