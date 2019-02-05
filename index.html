@@ -35,7 +35,7 @@
   <nav class="nav">
     <div class="nav-container">
       <a href="/">
-        <h2 class="nav-title">{{details.firstName}}.</h2>
+        <h2 class="nav-title">Sourav.</h2>
       </a>
       <!-- <ul>
         <li><a href="/">Posts</a></li>
@@ -50,23 +50,48 @@
     <div class="post-line"></div>
     <div ng-repeat="res in details.resume">
 
-      <h1 id="{{res.id}}">{{res.category}}</h1>
-
-      <p ng-if="res.details.type === 'string'">{{res.details.values}}</p>
-      <ul ng-if="res.details.type === 'points'">
-        <li ng-repeat="point in res.details.values">{{point.value}}</li>
-      </ul>
-
-      <ul ng-if="res.details.type === 'table'">
-        <li ng-repeat="table in res.details.values">
-          <h3 ng-if="table.type === 'company'">{{table.name}} <br /> <sup>{{table.role}} | {{table.period}}</sup></h3>
-          <ul ng-if="table.type === 'company'">
-            <li ng-repeat="tableDetails in table.detail">{{tableDetails.value}}</li>
-          </ul>
-          <h3 ng-if="table.type === 'study'">{{table.name}} <br /> <sup>{{table.marks}} | {{table.period}}</sup></h3>
-          <p ng-if="table.type === 'study'">{{table.detail}}</p>
-        </li>
-      </ul>
+            <h1 id="profile-summary">Profile Summary</h1>
+            <p>B.Tech with above 3 years of experience in TCS.Worked on CRMS portal and customer comms for two different telecom domain projects.</p>
+            
+            <h1 id="achievements">Achievements</h1>
+            <ul>
+              <li>Selected as the winner of On The Spot Award at TCS and got appreciation from the client for the excellent work done for them.</li>
+            </ul>
+            
+            
+            <h1 id="skills-and-proficiency">Skills and Proficiency</h1>
+            <ul>
+              <li><strong>Languages known:</strong> ​ Java ,HTML5/CSS3, XML, JavaScript, SQL</li>
+              <li><strong>Technologies:​</strong> Servlet/JSP/JSF, JDBC, Bootstrap, JQUERY, AJAX</li>
+            </ul>
+            
+            <h1 id="experiences">Experiences</h1>
+            <ul>
+              
+              <li>
+                <h3 id="tata-consultancy-services-system-engineer-july-2015---present">Tata Consultancy Services (System Engineer) <br /><sup>July, 2015 - Present</sup></h3>
+                <ul>
+                  <li>Work mainly based on Java and PL/SQL</li>
+                  <li>Developed and maintained several features of their existing as well as new web applications</li>
+                </ul>
+              </li>
+            </ul>
+            
+            <h1 id="education">Education</h1>
+            <ul>
+              <li>
+                <h3 id="btech-in-information-technology-cgpa-7.8--10-2011---2015">B.Tech in Information Technology (CGPA: 7.85 / 10) <br /><sup>2011 - 2015</sup></h3>
+                <p>Bengal Institute of Technology</p>
+              </li>
+              <li>
+                <h3 id="12th-grade-percentage-79-2011">12th Grade (Percentage: 79%) <br /><sup>2011</sup></h3>
+                <p>West Bengal Council of Higher Secondary Education</p>
+              </li>
+              <li>
+                <h3 id="10th-grade-percentage-77-2009">10th Grade (Percentage: 77%) <br /><sup>2009</sup></h3>
+                <p>West Bengal Board of Secondary Education</p>
+              </li>
+            </ul>
     </div>
 
     <div class="pagination">
